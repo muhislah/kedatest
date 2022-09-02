@@ -1,5 +1,4 @@
 import React from 'react'
-import { useEffect } from 'react'
 
 function scroll(ref) {
   const selected = document.querySelector(ref)
