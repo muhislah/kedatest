@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Header from '../../Components/module/Header'
 import chartimg from './chart.png'
 import background from './background.png'
