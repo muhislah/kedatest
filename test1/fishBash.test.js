@@ -1,0 +1,21 @@
+const fishBash = require("./fishBash")
+
+
+test('fishBash function',() => {
+  expect(fishBash(1)).toBe(1)
+  expect(fishBash(2)).toBe(2)
+  expect(fishBash(3)).toBe('fish')
+  expect(fishBash(4)).toBe(4)
+  expect(fishBash(5)).toBe('bash')
+  expect(fishBash(6)).toBe('fish')
+  expect(fishBash(7)).toBe(7)
+  expect(fishBash(8)).toBe(8)
+  expect(fishBash(9)).toBe('fish')
+  expect(fishBash(10)).toBe('bash')
+  expect(fishBash(11)).toBe(11)
+  expect(fishBash(12)).toBe('fish')
+  expect(fishBash(13)).toBe(13)
+  expect(fishBash(14)).toBe(14)
+  expect(fishBash(15)).toBe('fish bash')
+  expect(fishBash(16)).toBe(16)
+})

@@ -6,7 +6,7 @@ function mySort(array){
       }
     }
   }
-  return console.log(array)
+  return array
 }
 
-mySort([-1,2,5,4,1,6,4])
+module.exports = mySort
