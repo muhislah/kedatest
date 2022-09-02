@@ -1,0 +1,22 @@
+{
+  "data" : [
+    {
+      "title" : "Tier 1/ Basic",
+      "features" : ["Mencatat barang masuk","Mencatat barang keluar", "Mencatat hasil keuntungan"],
+      "price" : 4990000,
+      "image" : ""
+    },
+    {
+      "title" : "Tier 2/ Bussiness",
+      "features" : ["Mencatat barang masuk dan keluar","Mencatat Keuntungan","Dapat menganalisa hasil penjualan dengan CHART","Support 7x24 Jam"],
+      "price" : 14990000,
+      "image" : ""
+    },
+    {
+      "title" : "Tier 3/ Enterpreneur",
+      "features" : ["Mencatat barang masuk dan keluar","Mencatat Keuntungan","Dapat menganalisa hasil penjualan dengan CHART","Support 7x24 Jam", "Export data ke Excel", "AI Prediksi penghasilan"],
+      "price" : 29900000,
+      "image" : ""
+    }
+  ]
+}

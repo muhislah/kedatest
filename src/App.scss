@@ -1,0 +1,317 @@
+@mixin button($color : #63affb){
+  padding: 5px 15px;
+  border: 1px solid $color;
+  border-radius: 5px;
+  background-color: transparent;
+  color: $color ;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    background-color: $color;
+    color : #fff
+  }
+}
+
+$almostwhite : rgba(255,255,255,0.6);
+header {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding: 30px 10%;
+  box-sizing: border-box;
+  > .logo {
+    color: white;
+    font-weight: 900;
+  }
+  ul {
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li {
+      margin : 0 10px;
+      cursor: pointer;
+      > .login {
+        @include button
+      }
+    }
+  } 
+}
+.wrapper {
+  width: 100%;
+  padding-top: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  > img {
+    transform: rotate(30deg);
+    position: absolute;
+    width: 50%;
+    top: -400px;
+    left: -200px;
+    z-index: 2;
+  }
+  > img.reverse {
+    transform: rotate(-30deg);
+    position: fixed;
+    width: 50%;
+    right: -200px;
+    top: initial;
+    left: initial;
+    bottom: -200px;
+    z-index: 2;
+  }
+  .container {
+    position: relative;
+    z-index: 3;
+    margin: 0 auto;
+    width: 80%;
+    .small-container {
+      height: calc(100vh - 100px);
+      display: flex;
+      position: relative;
+      > img {
+        width: 400px;
+        height: 300px;
+        margin-right: auto;
+        position: absolute;
+        bottom: 100px;
+      }
+      .greeting {
+        padding-top: 100px;
+        margin-left: auto;
+        width: 60%;
+        > h1 {
+          font-size: 56px;
+          line-height: 56px;
+          margin-bottom: 10px;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.explore {
+  @include button;
+  height : 40px;
+  margin: 20px 0;
+}
+
+.headline {
+  font-size: 45px;
+  margin: 0;
+}
+
+#price, #contact, #about {
+  height: 100vh;
+  padding: 50px 0;
+  > h1 {
+    color : #63affb;
+  }
+  .section {
+    display: flex;
+    align-items: flex-end;
+    background-color: $almostwhite;
+    padding: 30px;
+    border-radius: 15px;
+    img {
+      width: 400px;
+      height: 300px;
+    }
+  }
+}
+
+.scroll {
+  position: fixed;
+  z-index: 4;
+  width: 40px;
+  height: 40px;
+  bottom: 50px;
+  right: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: $almostwhite;
+  transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  img {
+    position: relative;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:after {
+    content: '';
+    opacity: 0;
+  }
+  &:hover {
+    transform: translateY(-5px);
+    &:after{
+      color: white;
+      content: 'Scroll to Top';
+      position: absolute;
+      opacity: 1;
+      width: 100px;
+      left: -50%;
+      top : 120%;
+    }
+  }
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.6);
+  padding: 50px 0;
+  > .price-card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding : 30px 30px;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    > h2 {
+      color : #63affb;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-top:0;
+    }
+    ul {
+      text-align: left;
+      padding: 10px 20px;
+      margin: 20px 0 auto;
+    }
+    > hr {
+      width: 100%;
+      margin: 0;
+    }
+    .priceitem {
+      @include button;
+      margin-top: 20px;
+    }
+  }
+}
+.login-page {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 6;
+  top:0;
+  left: 0;
+  display: flex;
+  overflow: hidden;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  animation: fadeIn 200ms ease-in forwards;
+  &.fade{
+    opacity: 0;
+    .container {
+      transform: translateX(100%);
+    }
+  }
+  .container {
+    transition: all 400ms ease-in-out;
+    position: relative;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    padding: 50px;
+    margin-left: auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+    img {
+      width: 50%;
+      margin: 20px;
+    }
+    h1{
+      margin: 5px;
+      color: #63affb
+    }
+    .form {
+      text-align: left;
+      width: 80%;
+      label {
+        display: block;
+        margin: 10px auto;
+      }
+      input {
+        height: 40px;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 5px;
+        outline : 0;
+        border: 1px solid #dbd9d9;
+        transition: border 200ms ease-in-out;
+        &:invalid {
+          // animation: shake 1000ms linear infinite;
+          border: 1px solid #bf3d3d;
+        }
+        &:valid {
+          border: 1px solid #63affb;
+        }
+      }
+      button {
+        @include button;
+        height: 40px;
+        width: 100%;
+        margin: 20px auto;
+      }
+    }
+    .exit {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 0px;
+      left: 0px;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
