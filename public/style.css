@@ -96,6 +96,68 @@ header ul li > .login:hover {
   width: 50%;
 }
 
+.section2 {
+  display: flex;
+  align-items: flex-end;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 15px;
+  padding: 0;
+  align-items: flex-start;
+}
+.section2 .message {
+  width: 50%;
+  padding: 30px;
+}
+.section2 .message form {
+  display: flex;
+  flex-direction: column;
+}
+.section2 .message form label {
+  margin: 10px 0;
+}
+.section2 .message form input {
+  width: 100%;
+  height: 40px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #dbd9d9;
+}
+.section2 .message form button {
+  padding: 5px 15px;
+  border: 1px solid #63affb;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #63affb;
+  font-weight: 700;
+  cursor: pointer;
+  height: 40px;
+  margin: 10px 0;
+  color: #fff;
+  background-color: #63affb;
+}
+.section2 .message form button:hover {
+  background-color: #63affb;
+  color: #fff;
+}
+
+.address .address-item {
+  display: flex;
+  align-items: center;
+}
+.address .address-item img {
+  width: 32px;
+  height: 32px;
+}
+.address .address-item p {
+  margin-left: 15px;
+  width: 50%;
+}
+.address > img {
+  margin-top: 40px;
+}
+
 .explore {
   padding: 5px 15px;
   border: 1px solid #63affb;
@@ -131,7 +193,7 @@ header ul li > .login:hover {
   padding: 30px;
   border-radius: 15px;
 }
-#price .section img, #contact .section img, #about .section img {
+#price .section > img, #contact .section > img, #about .section > img {
   width: 400px;
   height: 300px;
 }
@@ -284,11 +346,8 @@ header ul li > .login:hover {
   border: 1px solid #dbd9d9;
   transition: border 200ms ease-in-out;
 }
-.login-page .container .form input:invalid {
-  border: 1px solid #bf3d3d;
-}
 .login-page .container .form input:valid {
-  border: 1px solid #63affb;
+  border: 1px solid #65b0fb;
 }
 .login-page .container .form button {
   padding: 5px 15px;
@@ -335,6 +394,94 @@ header ul li > .login:hover {
   }
   40%, 60% {
     transform: translate3d(4px, 0, 0);
+  }
+}
+@media screen and (max-width: 420px) {
+  header {
+    padding: 20px 5%;
+  }
+  header .logo {
+    color: #65b0fb;
+  }
+  header ul li {
+    margin: 5px;
+  }
+  .wrapper img.reverse {
+    position: fixed;
+    bottom: 0;
+    width: 50vh;
+    right: -200px;
+  }
+  .wrapper > .container {
+    width: 90%;
+  }
+  .wrapper > .container .small-container {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  .wrapper > .container .small-container img {
+    width: 50%;
+    z-index: 1;
+    border-radius: 15px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 70%;
+    height: auto;
+  }
+  .wrapper > .container .small-container .greeting {
+    width: 100%;
+    margin: 80px auto;
+    padding: 0;
+  }
+  .wrapper > .container .small-container .greeting h1 {
+    filter: drop-shadow(0 0 0.75rem white);
+    position: relative;
+    margin: 0;
+    font-size: 55px;
+    line-height: 55px;
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+  #price, #about, #contact {
+    height: auto;
+  }
+  #price > h1, #price > p, #about > h1, #about > p, #contact > h1, #contact > p {
+    text-align: center;
+  }
+  #price .section > img, #about .section > img, #contact .section > img {
+    display: none;
+    padding: 0;
+  }
+  .price-container {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+  }
+  .price-container .price-card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .section2 {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .section2 .message {
+    width: 100%;
+    padding: 0;
+  }
+  .address > img {
+    display: none;
+  }
+  .address .address-item p {
+    width: 100%;
+  }
+  .login-page {
+    background-color: transparent;
+  }
+  .login-page .container {
+    width: 100vw;
+    padding: 50px 5%;
   }
 }
 

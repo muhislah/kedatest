@@ -10,9 +10,15 @@ const About = () => {
         <img src={company} alt="" />
         <div>
           <h3>Profile</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, recusandae repellat omnis, earum voluptatum optio id, corrupti maxime molestias veritatis necessitatibus quis? Iusto id tempora, explicabo tenetur ipsum minus alias voluptate adipisci, excepturi necessitatibus exercitationem culpa deserunt similique nulla eius quod, quisquam beatae molestias? Totam odit deleniti at quos nostrum.</p>
+          <p>Our company is located in Pekalongan, Central Java. This company is engaged in providing package system services to make it easier for entrepreneurs to monitor the administration of their company. This company provides a package system service which consists of 3 packages.</p>
           <h3>Vision and Mission</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, recusandae repellat omnis, earum voluptatum optio id, corrupti maxime molestias veritatis necessitatibus quis? Iusto id tempora, explicabo tenetur ipsum minus alias voluptate adipisci, excepturi necessitatibus exercitationem culpa deserunt similique nulla eius quod, quisquam beatae molestias? Totam odit deleniti at quos nostrum.</p>
+          <p>realize a modern industry that is transparent and quality</p>
+          <ul>
+            <li>Participate in creating an orderly company administration</li>
+            <li>Transparency and honesty</li>
+            <li>Make it easier for users to manage office administration</li>
+            <li>Provide a dynamic system that can be updated in accordance with the development of modern industry</li>
+          </ul>
         </div>
       </div>
     </div>

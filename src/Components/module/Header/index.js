@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 
 function scroll(ref) {
   const selected = document.querySelector(ref)
@@ -13,6 +14,7 @@ const Header = ({open}) => {
         <li onClick={() => scroll('#about')}>About</li>
         <li onClick={() => scroll('#price')}>Pricing</li>
         <li onClick={() => scroll('#contact')}>Contact</li>
+        <li></li>
         <li><button className="login" onClick={open}>Login</button></li>
       </ul>
     </header>

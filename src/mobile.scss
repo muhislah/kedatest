@@ -1,0 +1,102 @@
+// * {
+//   border: 1px solid red !important;
+// }
+
+@media screen and (max-width : 420px) {
+  header {
+    padding : 20px 5%;
+    .logo {
+      color: #65b0fb;
+    }
+    ul {
+      li {
+        margin: 5px;
+      }
+    }
+  }
+  .wrapper {
+    img.reverse {
+      position: fixed;
+      bottom: 0;
+      width: 50vh;
+      right: -200px;
+    }
+    >.container {
+      width: 90%;
+      .small-container {
+        height: auto;
+        flex-direction: column-reverse;
+        img {
+          width: 50%;
+          z-index: 1;
+          border-radius: 15px;
+          position: absolute;
+          top: 80px;
+          right: 0;
+          width: 70%;
+          height: auto;
+        }
+        .greeting {
+          width: 100%;
+          margin: 80px auto;
+          padding: 0;
+          h1 {
+            filter: drop-shadow(0 0 0.75rem white);
+            position: relative;
+            margin:0;
+            font-size: 55px;
+            line-height: 55px;
+            margin-bottom: 20px;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+  #price, #about, #contact {
+    height: auto;
+    > h1, > p {
+      text-align: center;
+    }
+    .section {
+      > img {
+        display: none;
+        padding: 0;
+      }
+    }
+  }
+  .price-container {
+    flex-direction: column;
+    padding : 10px;
+    height: auto;
+    .price-card {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  .section2 {
+    flex-direction: column;
+    padding : 10px;
+    .message {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .address {
+    > img {
+      display: none;
+    }
+    .address-item {
+      p {
+        width: 100%;
+      }
+    }
+  }
+  .login-page {
+    background-color: transparent;
+    .container {
+      width: 100vw;
+      padding: 50px 5%;
+    }
+  }
+}

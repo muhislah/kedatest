@@ -12,6 +12,15 @@
   }
 }
 
+@mixin section() {
+  display: flex;
+  align-items: flex-end;
+  background-color: $almostwhite;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+
 $almostwhite : rgba(255,255,255,0.6);
 header {
   position: relative;
@@ -100,6 +109,56 @@ header {
   }
 }
 
+.section2 {
+  @include section;
+  padding: 0;
+  align-items: flex-start;
+  .message {
+    width: 50%;
+    padding: 30px;
+    form {
+      display: flex;
+      flex-direction: column;
+      label {
+        margin: 10px 0;
+      }
+      input {
+        width: 100%;
+        height: 40px;
+        padding : 10px 15px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border : 1px solid #dbd9d9;
+      }
+      button {
+        @include button;
+        height: 40px;
+        margin: 10px 0;
+        color: #fff;
+        background-color: #63affb;
+      }
+    }
+  }
+}
+
+.address {
+  .address-item {
+    display: flex;
+    align-items: center;
+    img {
+      width: 32px;
+      height: 32px
+    }
+    p {
+      margin-left: 15px;
+      width: 50%
+    }
+  }
+  > img {
+    margin-top: 40px;
+  }
+}
+
 .explore {
   @include button;
   height : 40px;
@@ -118,12 +177,8 @@ header {
     color : #63affb;
   }
   .section {
-    display: flex;
-    align-items: flex-end;
-    background-color: $almostwhite;
-    padding: 30px;
-    border-radius: 15px;
-    img {
+    @include section;
+    > img {
       width: 400px;
       height: 300px;
     }
@@ -263,12 +318,8 @@ header {
         outline : 0;
         border: 1px solid #dbd9d9;
         transition: border 200ms ease-in-out;
-        &:invalid {
-          // animation: shake 1000ms linear infinite;
-          border: 1px solid #bf3d3d;
-        }
         &:valid {
-          border: 1px solid #63affb;
+          border: 1px solid #65b0fb;
         }
       }
       button {
@@ -315,3 +366,5 @@ header {
     transform: translate3d(4px, 0, 0);
   }
 }
+
+@import 'mobile'
